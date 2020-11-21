@@ -36,9 +36,10 @@ inquirer
     },
     // question for license details
     {
-      type: "input",
-      message: "Required Licensing?",
+      type: "list",
+      message: "What is Licensing was required?",
       name: "license",
+      choices: ["1", "2", "3", "4"],
     },
     // question to get all project contributors
     {

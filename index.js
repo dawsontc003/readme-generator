@@ -51,11 +51,6 @@ inquirer
     },
     {
       type: "input",
-      message: "Additional questions?",
-      name: "questions",
-    },
-    {
-      type: "input",
       message: "What is your GitHub profile?",
       name: "githubinfo",
     },
@@ -84,9 +79,11 @@ inquirer
         response.contributing
       )}\n\n# Test Instructions:\n${JSON.stringify(
         response.tests
-      )}\n\n# Questions:\n${JSON.stringify(
+      )}\n\n# Questions:\nhttps://github.com/${
         response.githubinfo
-      )}${JSON.stringify(response.contactinfo)}`,
+      }\nIf you have specific questions please contact the primary developer at:${JSON.stringify(
+        response.contactinfo
+      )}`,
       (err) => (err ? console.error(err) : console.log("Success!")),
       console.log(response)
     )

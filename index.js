@@ -65,7 +65,10 @@ inquirer
     },
   ])
   .then((response) =>
-    fs.writeFile("README.md", `${JSON.stringify(process.argv[2])}`, (err) =>
-      err ? console.error(err) : console.log("message")
+    fs.writeFile(
+      "README.md",
+      `${response}`,
+      (err) => (err ? console.error(err) : console.log("message"))
+      // console.log(response)
     )
   );

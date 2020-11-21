@@ -67,7 +67,7 @@ inquirer
   .then((response) =>
     fs.writeFile(
       "README.md",
-      `${response}`,
+      `${JSON.stringify(response)}`,
       (err) => (err ? console.error(err) : console.log("message"))
       // console.log(response)
     )

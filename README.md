@@ -1,1 +1,1 @@
-[object Object]
+{"Title":"adfadfasdg","Description":"agasgas","contents":"gasdgasdfg","installations":"asfgasdfg","usage":"asdf","license":"","contributing":"asgas","tests":"gasd","questions":"fga","githubinfo":"sg","contactinfo":"asfg"}

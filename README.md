@@ -3,11 +3,17 @@
 
 # Table of Contents:
 [Description](#description)
+
 [Installations](#installations)
+
 [Usage Information](#usage-information)
+
 [Licenses](#licenses)
+
 [Contribution Guidelines](#contribution-guidelines)
+
 [Test Instructions](#test-instructions)
+
 [Questions](#questions)
 
 # Description:
@@ -20,7 +26,7 @@
 ""
 
 # Licenses:
-"1"
+"MIT"
 
 # Contribution Guidelines:
 ""
@@ -30,4 +36,5 @@
 
 # Questions:
 https://github.com/
-If you have specific questions please contact the primary developer at:""
+
+If you have specific questions please contact the primary developer at: ""

@@ -16,12 +16,6 @@ inquirer
       message: "Provide a description of your project?",
       name: "Description",
     },
-    // table of contents details
-    {
-      type: "input",
-      message: "table of contents?",
-      name: "contents",
-    },
     // question for installation details
     {
       type: "input",
@@ -37,9 +31,9 @@ inquirer
     // question for license details
     {
       type: "list",
-      message: "What is Licensing was required?",
+      message: "What kind of Licensing was required?",
       name: "license",
-      choices: ["1", "2", "3", "4"],
+      choices: ["MIT", "APACHE", "GPL", "BSD", "None"],
     },
     // question to get all project contributors
     {
@@ -73,7 +67,7 @@ inquirer
       "README.md",
       `# Title:\n${JSON.stringify(
         response.Title
-      )}\n\n# Table of Contents:\n[Description](#description)\n[Installations](#installations)\n[Usage Information](#usage-information)\n[Licenses](#licenses)\n[Contribution Guidelines](#contribution-guidelines)\n[Test Instructions](#test-instructions)\n[Questions](#questions)\n\n# Description:\n${JSON.stringify(
+      )}\n\n# Table of Contents:\n[Description](#description)\n\n[Installations](#installations)\n\n[Usage Information](#usage-information)\n\n[Licenses](#licenses)\n\n[Contribution Guidelines](#contribution-guidelines)\n\n[Test Instructions](#test-instructions)\n\n[Questions](#questions)\n\n# Description:\n${JSON.stringify(
         response.Description
       )}\n\n# Installations:\n${JSON.stringify(
         response.installations
@@ -87,7 +81,7 @@ inquirer
         response.tests
       )}\n\n# Questions:\nhttps://github.com/${
         response.githubinfo
-      }\nIf you have specific questions please contact the primary developer at:${JSON.stringify(
+      }\n\nIf you have specific questions please contact the primary developer at: ${JSON.stringify(
         response.contactinfo
       )}`,
       // error handling and success message to advise commandline user of error or succes

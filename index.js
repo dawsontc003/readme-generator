@@ -73,9 +73,7 @@ inquirer
       "README.md",
       `# Title:\n${JSON.stringify(
         response.Title
-      )}\n\n# Table of Contents:\n${JSON.stringify(
-        response.contents
-      )}\n\n# Description:\n${JSON.stringify(
+      )}\n\n# Table of Contents:\n[Description](#description)\n\n# Description:\n${JSON.stringify(
         response.Description
       )}\n\n# Installations:\n${JSON.stringify(
         response.installations

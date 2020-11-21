@@ -1,3 +1,4 @@
+// Declaring a const variable to pull in
 const inquirer = require("inquirer");
 const fs = require("fs");
 
@@ -67,8 +68,18 @@ inquirer
   .then((response) =>
     fs.writeFile(
       "README.md",
-      `${JSON.stringify(response)}`,
-      (err) => (err ? console.error(err) : console.log("message"))
-      // console.log(response)
+      `# Title:\n${JSON.stringify(
+        response.Title
+      )}\n\n# Table of Contents:\n${JSON.stringify(
+        response.contents
+      )}\n\n# Description:\n${JSON.stringify(
+        response.Description
+      )}\n\n# Installations:\n${JSON.stringify(
+        response.installations
+      )}\n\n# Usage Information:\n${JSON.stringify(
+        response.usage
+      )}\n\n# Licenses:\n${JSON.stringify(response.license)}`,
+      (err) => (err ? console.error(err) : console.log("Success!")),
+      console.log(response)
     )
   );

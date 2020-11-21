@@ -78,7 +78,15 @@ inquirer
         response.installations
       )}\n\n# Usage Information:\n${JSON.stringify(
         response.usage
-      )}\n\n# Licenses:\n${JSON.stringify(response.license)}`,
+      )}\n\n# Licenses:\n${JSON.stringify(
+        response.license
+      )}\n\n# Contribution Guidelines:\n${JSON.stringify(
+        response.contributing
+      )}\n\n# Test Instructions:\n${JSON.stringify(
+        response.tests
+      )}\n\n# Questions:\n${JSON.stringify(
+        response.githubinfo
+      )}${JSON.stringify(response.contactinfo)}`,
       (err) => (err ? console.error(err) : console.log("Success!")),
       console.log(response)
     )

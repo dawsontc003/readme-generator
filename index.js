@@ -1,6 +1,15 @@
 // Declaring a const variable to pull in
 const inquirer = require("inquirer");
 const fs = require("fs");
+// declare variables for badge license icon
+const mit = "![MIT badge](https://img.shields.io/badge/License-MIT-yellow.svg)";
+const apache =
+  "![APACHE badge](https://img.shields.io/badge/License-Apache%202.0-blue.svg)";
+const gpl =
+  "![GPL badge](https://img.shields.io/badge/License-GPL%20v2-blue.svg)";
+const bsd =
+  "![BSD badge](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)";
+
 // inquirer method for prompt user questions via the command line terminal
 inquirer
   .prompt([
@@ -65,27 +74,9 @@ inquirer
     // invoking write file method with file type ".md" with details to inject user input from the command line in the desired sectoins of the .md file
     fs.writeFile(
       "README.md",
-      `# Title:\n${JSON.stringify(
-        response.Title
-      )}\n\n# Table of Contents:\n[Description](#description)\n\n[Installations](#installations)\n\n[Usage Information](#usage-information)\n\n[Licenses](#licenses)\n\n[Contribution Guidelines](#contribution-guidelines)\n\n[Test Instructions](#test-instructions)\n\n[Questions](#questions)\n\n# Description:\n${JSON.stringify(
-        response.Description
-      )}\n\n# Installations:\n${JSON.stringify(
-        response.installations
-      )}\n\n# Usage Information:\n${JSON.stringify(
-        response.usage
-      )}\n\n# Licenses:\n${JSON.stringify(
-        response.license
-      )}\n\n# Contribution Guidelines:\n${JSON.stringify(
-        response.contributing
-      )}\n\n# Test Instructions:\n${JSON.stringify(
-        response.tests
-      )}\n\n# Questions:\nhttps://github.com/${
-        response.githubinfo
-      }\n\nIf you have specific questions please contact the primary developer at: ${JSON.stringify(
-        response.contactinfo
-      )}`,
+      `# ${response.Title}
+      \n\n${mit}\n\n# Table of Contents:\n[Description](#description)\n\n[Installations](#installations)\n\n[Usage Information](#usage-information)\n\n[Licenses](#licenses)\n\n[Contribution Guidelines](#contribution-guidelines)\n\n[Test Instructions](#test-instructions)\n\n[Questions](#questions)\n\n# Description:\n${response.Description}\n\n# Installations:\n${response.installations}\n\n# Usage Information:\n${response.usage}\n\n# Licenses:\n${response.license}\n\n# Contribution Guidelines:\n${response.contributing}\n\n# Test Instructions:\n${response.tests}\n\n# Questions:\nhttps://github.com/${response.githubinfo}\n\nIf you have specific questions please contact the primary developer at: ${response.contactinfo}`,
       // error handling and success message to advise commandline user of error or succes
-      (err) => (err ? console.error(err) : console.log("Success!")),
-      console.log(response)
+      (err) => (err ? console.error(err) : console.log("Success!"))
     )
   );

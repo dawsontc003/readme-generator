@@ -1,4 +1,4 @@
-# Readme-generator
+# Readme generator
       
 
 ![MIT badge](https://img.shields.io/badge/License-MIT-yellow.svg)
@@ -19,22 +19,22 @@
 [Questions](#questions)
 
 # Description:
-This is a command line application that will help developers quickly generate professional README.md files. This is accomplished by asking developers questions about their project and injecting that detail into an organized README file.
+Answer questions about a project to generate a readme file
 
 # Installations:
-NPM Inquirer
+inquirer
 
 # Usage Information:
-This application is used after completing development project to provide context about the build.
+This application generates a readme file systematically after questions are answered.
 
 # Licenses:
-None
+MIT
 
 # Contribution Guidelines:
 none
 
 # Test Instructions:
-Manual testing of formatting and validating correct content
+manual
 
 # Questions:
 https://github.com/dawsontc003
